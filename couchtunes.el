@@ -1,6 +1,7 @@
 ;;; couchtunes.el --- Couchtunes client for GNU Emacs
 
 ;; Author: Axel Johnsson <johnsson.axel@gmail.com>
+;; URL: https://github.com/axeljohnsson/couchtunes-emacs
 ;; Version: 0.0.1
 
 ;; Copyright (C) 2012  Axel Johnsson
@@ -205,30 +206,4 @@
 
 (provide 'couchtunes)
 
-;; (defun couchtunes-import (artist album year tracks)
-;;   (interactive
-;;    (list
-;;     (read-string "Artist: ")
-;;     (read-string "Album: ")
-;;     (read-string "Year: ")
-;;     (read-number "Tracks: ")))
-;;   (set-buffer (get-buffer-create "couchtunes-import"))
-;;   ;; (insert "{\n\"docs\": [\n")
-;;   ;; (let ((counter 1))
-;;   ;;   (while (<= counter tracks)
-;;   ;;     (insert (concat "{ \"artist\": \"" artist "\", \"album\": \"" album "\", \"year\": " year ",\n"))
-;;   ;;     (insert (concat "\"track\": " (number-to-string counter) ", \"title\": \"\" }"))
-;;   ;;     (if (< counter tracks)
-;;   ;; 	  (insert ","))
-;;   ;;     (newline)
-;;   ;;     (setq counter (+ counter 1))))
-;;   ;; (insert "]\n}")
-;;   (let ((xs) (hash (make-hash-table)))
-;;     (dotimes (number 4)
-;;       (setq xs (cons '(:artist artist :album album :year year :track "" :title "") xs)))
-;;     (puthash "docs" xs 
-;;     (insert (json-encode xs)))
-;;   (goto-char (point-min))
-;;   (javascript-mode)
-;;   (indent-region (point-min) (point-max))
-;;   (switch-to-buffer (current-buffer)))
+;;; couchtunes.el ends here
